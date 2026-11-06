@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color: #55 = 33% de opacidad (primeros dos dígitos = transparencia) -->
+    <!-- 00=transparente, 33=20%, 55=33%, 88=53%, AA=66%, FF=100% -->
+    <solid android:color="#55000000" />
+    <corners android:radius="12dp" />
+    <padding
+        android:left="16dp"
+        android:right="16dp"
+        android:top="8dp"
+        android:bottom="8dp" />
+</shape>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cuero">
+
+    <!-- 1. Barril (sin recortar) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/baril_fondo"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/baril_desc" />
+
+    <!-- 2. Logo con marco exterior redondo de color cuero -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="135dp"
+    android:layout_height="135dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="67.5dp"
+    app:cardElevation="0dp"
+    android:background="@color/cuero">        <!-- El color del marco -->
+
+    <!-- Logo interior redondo -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="65dp"
+    app:cardElevation="0dp"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo_barchello"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/logo_desc" />
+
+</androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 3. Texto con color de marca y posición ajustable -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/barchello_title"
+        android:textColor="@color/blanco"
+        android:textSize="24sp"
+        android:fontFamily="@font/playfairdisplay_bold"
+        android:shadowColor="@color/cuero"
+        android:shadowDx="2.5"
+        android:shadowDy="2.5"
+        android:shadowRadius="5"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="465dp" />
+
+</FrameLayout>

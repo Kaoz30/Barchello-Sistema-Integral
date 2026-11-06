@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@color/blanco"
+    android:layout_marginBottom="2dp">
+
+    <TextView
+        android:id="@+id/tv_notificacion_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notificacion_titulo_ejemplo"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_notificacion_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notificacion_descripcion_ejemplo"
+        android:textSize="12sp"
+        android:textColor="@color/gris_claro" />
+
+    <TextView
+        android:id="@+id/tv_notificacion_fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notificacion_fecha_ejemplo"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

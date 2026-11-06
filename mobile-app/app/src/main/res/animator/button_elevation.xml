@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cuando el botón está presionado, se eleva (sombra más grande) -->
+    <item android:state_pressed="true">
+        <objectAnimator
+            android:propertyName="translationZ"
+            android:valueTo="8dp"
+            android:duration="100"
+            android:valueType="floatType" />
+    </item>
+    <!-- Cuando el botón no está presionado, vuelve a su sombra normal -->
+    <item>
+        <objectAnimator
+            android:propertyName="translationZ"
+            android:valueTo="2dp"
+            android:duration="100"
+            android:valueType="floatType" />
+    </item>
+</selector>

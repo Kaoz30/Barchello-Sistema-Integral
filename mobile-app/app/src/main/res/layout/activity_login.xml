@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/cuero">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp">
+
+        <!-- Tarjeta blanca centrada -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="32dp"
+            android:maxWidth="400dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="32dp" >
+
+                <!-- Logo -->
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/logo_barchello"
+                    android:contentDescription="@string/logo_desc"
+                    android:layout_marginBottom="-6dp" />
+
+                <!-- Título -->
+                <TextView
+                style="@style/TituloPrincipal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_titulo"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- ==================== CAMPO USUARIO ==================== -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_usuario"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:hint="@string/login_usuario"
+                    app:boxBackgroundColor="@color/Gray99"
+                    app:boxStrokeColor="@color/input_focus_selector"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintTextColor="@color/input_focus_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:drawableStart="@drawable/ic_person"
+                        android:drawableTint="@color/roble"
+                        android:drawablePadding="12dp"
+                        android:textColor="@color/cuero" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ==================== CAMPO CONTRASEÑA ==================== -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="@string/login_password"
+                    android:background="@null"
+                    app:boxBackgroundColor="@color/Gray99"
+                    app:boxStrokeColor="@color/input_focus_selector"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_eye_slash"
+                    app:endIconTint="#BFBCBA"
+                    app:hintTextColor="@color/input_focus_selector" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/roble"
+                    android:inputType="textPassword"
+                    android:textColor="@color/cuero"
+                    android:layout_marginBottom="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ==================== RECORDARME (Switch sin ripple) ==================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="2dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginBottom="2dp">
+
+                    <!-- 1. TEXTO "Recordarme" (primero, ocupando el espacio) -->
+                    <TextView
+                        android:id="@+id/tv_recordarme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/login_recordarme"
+                        android:textColor="@color/cuero"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@null" />
+
+                    <!-- 2. SWITCH (segundo, anclado a la derecha) -->
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_recordarme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        app:thumbTint="@color/switch_thumb_selector"
+                        app:trackTint="@color/switch_track_selector" />
+
+                </LinearLayout>
+
+                <!-- ==================== BOTÓN INGRESAR ==================== -->
+                <Button
+                    android:id="@+id/btn_login"
+                    style="@style/ButtonPrimario"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/login_ingresar"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginBottom="0dp"
+                    app:cornerRadius="28dp" />
+
+                <!-- ==================== BOTÓN GOOGLE ==================== -->
+                <Button
+                    android:id="@+id/btn_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="14dp"
+                    android:backgroundTint="@color/arena"
+                    android:text="@string/login_google"
+                    android:textColor="@color/roble"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="-5dp"
+                    app:cornerRadius="27dp"
+                    app:strokeColor="@color/gris_claro"
+                    app:strokeWidth="1dp"
+                    app:icon="@drawable/ic_google"
+                    app:iconTint="@null"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp" />
+
+                <!-- ==================== ENLACES INFERIORES (NUEVA SECCIÓN) ==================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp">
+
+                    <!-- 1. Continuar como invitado (subrayado, sin ripple) -->
+                    <TextView
+                        android:id="@+id/tv_invitado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_invitado"
+                        android:textColor="@color/roble"
+                        android:textSize="14sp"
+                        android:paddingVertical="8dp"
+                        android:layout_marginTop="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@null" />
+
+                    <!-- 2. ¿Olvidaste tu contraseña? (sin subrayado, más pequeño) -->
+                    <TextView
+                        android:id="@+id/tv_olvidaste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_olvidaste"
+                        android:textColor="@color/roble"
+                        android:textSize="13sp"
+                        android:paddingVertical="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@null" />
+
+                <!-- 3. ¿No tienes cuenta? Regístrate -->
+                    <TextView
+                        android:id="@+id/tv_registrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_registrate"
+                        android:textColor="@color/roble"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:paddingVertical="8dp"
+                        android:layout_marginTop="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@null" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

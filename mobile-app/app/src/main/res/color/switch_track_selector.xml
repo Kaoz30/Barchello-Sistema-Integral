@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado ON: Fondo del switch (track) en TEAL PASTEL (muy visible) -->
+    <item android:state_checked="true" android:color="#00897B" />
+
+    <!-- Estado OFF: Fondo en GRIS MUY CLARO (casi imperceptible) -->
+    <item android:color="#E8E8E8" />
+</selector>

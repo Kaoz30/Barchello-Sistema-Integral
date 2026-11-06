@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/arena">
+
+    <TextView
+        style="@style/TituloPrincipal"
+        android:text="@string/mi_pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_carrito_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/carrito_observaciones"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_observaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_domicilio_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinner_direcciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/seleccionar_direccion" />
+
+        <Button
+            android:id="@+id/btn_nueva_direccion"
+            style="@style/ButtonSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/carrito_nueva_direccion"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_metodo_pago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_efectivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/carrito_efectivo" />
+
+            <RadioButton
+                android:id="@+id/rb_tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/carrito_tarjeta" />
+
+            <RadioButton
+                android:id="@+id/rb_transferencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/carrito_transferencia" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/carrito_costo_envio"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_costo_envio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/costo_envio_valor"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/carrito_total"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_enviar_pedido"
+        style="@style/ButtonPrimario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/carrito_enviar_mesa"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

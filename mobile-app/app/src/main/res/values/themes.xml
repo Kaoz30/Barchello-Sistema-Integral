@@ -1,0 +1,82 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.BarchelloCliente" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/roble</item>
+        <item name="colorPrimaryVariant">@color/cuero</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorSecondary">@color/arena</item>
+        <item name="android:statusBarColor">@color/cuero</item>
+        <item name="android:windowBackground">@color/arena</item>
+        <!-- Fuente personalizada (Playfair para títulos, Roboto para cuerpo) -->
+
+        <item name="android:fontFamily">@font/barchello_fonts</item>
+    </style>
+
+    <!-- Estilo para botón primario (marrón roble) -->
+    <style name="ButtonPrimario" parent="Widget.MaterialComponents.Button">
+        <!-- 1. Fondo: ahora usa el selector que acabamos de crear -->
+        <item name="backgroundTint">@color/selector_button_primary_tint</item>
+
+        <!-- 2. Texto: color blanco -->
+        <item name="android:textColor">@color/blanco</item>
+
+        <!-- 3. Texto: MAYÚSCULAS desactivadas (para que se vea como escribimos) -->
+        <item name="android:textAllCaps">false</item>
+
+        <!-- 4. Texto: tamaño más grande (18sp en lugar del tamaño por defecto) -->
+        <item name="android:textSize">16sp</item>
+
+        <!-- 5. Texto: negrita -->
+
+
+        <!-- 6. Fuente personalizada de Barchello (Roboto o Playfair) -->
+        <item name="android:fontFamily">@font/roboto_regular</item>
+
+        <!-- 7. Esquinas redondeadas -->
+        <item name="cornerRadius">26dp</item>
+
+        <!-- 8. Espaciado interno -->
+        <item name="android:padding">12dp</item>
+
+        <!-- 9. EFECTO 3D (ELEVACIÓN AL PRESIONAR) - OPCIONAL PERO RECOMENDADO -->
+        <item name="android:stateListAnimator">@animator/button_elevation</item>
+    </style>
+
+    <!-- Estilo para botón secundario (borde roble, fondo transparente) -->
+    <style name="ButtonSecundario" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/roble</item>
+        <item name="android:textColor">@color/cuero</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <!-- Estilo CardProducto  -->
+    <style name="CardProducto" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+    </style>
+
+    <!-- Estilo para títulos principales (Playfair Display) -->
+    <style name="TituloPrincipal">
+        <item name="android:fontFamily">@font/playfairdisplay_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/cuero</item>
+    </style>
+
+    <!-- Estilo para logo redondo de activity main  -->
+    <style name="ShapeAppearanceOverlay.App.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Estilo ButtonPeligro  -->
+    <style name="ButtonPeligro" parent="ButtonPrimario">
+        <item name="backgroundTint">@color/rojo_error</item>
+    </style>
+
+    <!-- Estilo imagen de producto en detalle  -->
+    <style name="ShapeAppearanceOverlay.App.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>

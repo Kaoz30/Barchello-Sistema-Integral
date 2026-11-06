@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1024,
+    "mesa": 3,
+    "hora": "19:45",
+    "estado": "en_preparacion",
+    "mesero_id": 2,
+    "sucursal_id": 1,
+    "items": [
+      {
+        "id_item": 1,
+        "producto": "Hamburguesa Artesanal",
+        "cantidad": 2,
+        "categoria": "comida",
+        "estado": "en_preparacion",
+        "asignado_a": 3,
+        "asignado_nombre": "Fernando Niño",
+        "hora_inicio": "19:46",
+        "hora_fin": null
+      },
+      {
+        "id_item": 2,
+        "producto": "Cerveza Artesanal IPA",
+        "cantidad": 2,
+        "categoria": "bebida",
+        "estado": "listo",
+        "asignado_a": 5,
+        "asignado_nombre": "Carlos Pérez",
+        "hora_inicio": "19:46",
+        "hora_fin": "19:48"
+      },
+      {
+        "id_item": 3,
+        "producto": "Alitas BBQ",
+        "cantidad": 1,
+        "categoria": "comida",
+        "estado": "pendiente",
+        "asignado_a": null,
+        "asignado_nombre": null,
+        "hora_inicio": null,
+        "hora_fin": null
+      }
+    ]
+  },
+  {
+    "id": 1025,
+    "mesa": 5,
+    "hora": "20:10",
+    "estado": "pendiente",
+    "mesero_id": 2,
+    "sucursal_id": 1,
+    "items": [
+      {
+        "id_item": 1,
+        "producto": "Mojito",
+        "cantidad": 3,
+        "categoria": "bebida",
+        "estado": "pendiente",
+        "asignado_a": null,
+        "asignado_nombre": null,
+        "hora_inicio": null,
+        "hora_fin": null
+      },
+      {
+        "id_item": 2,
+        "producto": "Nachos con Queso",
+        "cantidad": 1,
+        "categoria": "comida",
+        "estado": "pendiente",
+        "asignado_a": null,
+        "asignado_nombre": null,
+        "hora_inicio": null,
+        "hora_fin": null
+      }
+    ]
+  },
+  {
+    "id": 1023,
+    "mesa": 1,
+    "hora": "19:15",
+    "estado": "listo_para_servir",
+    "mesero_id": 2,
+    "sucursal_id": 1,
+    "items": [
+      {
+        "id_item": 1,
+        "producto": "Pizza Artesanal",
+        "cantidad": 1,
+        "categoria": "comida",
+        "estado": "listo",
+        "asignado_a": 3,
+        "asignado_nombre": "Fernando Niño",
+        "hora_inicio": "19:16",
+        "hora_fin": "19:28"
+      },
+      {
+        "id_item": 2,
+        "producto": "Cerveza Rubia",
+        "cantidad": 2,
+        "categoria": "bebida",
+        "estado": "listo",
+        "asignado_a": 5,
+        "asignado_nombre": "Carlos Pérez",
+        "hora_inicio": "19:16",
+        "hora_fin": "19:19"
+      }
+    ]
+  }
+]

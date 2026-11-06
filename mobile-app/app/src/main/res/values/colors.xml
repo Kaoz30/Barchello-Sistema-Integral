@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="roble">#8D6E63</color>        <!-- Marrón roble: acciones principales -->
+    <color name="cuero">#3E2723</color>        <!-- Cuero oscuro: barras, textos principales -->
+    <color name="arena">#EFEBE9</color>        <!-- Blanco arena: fondos -->
+    <color name="arena_light">#F5F2F0</color>  <!-- Variante más clara para tarjetas -->
+    <color name="Gray99">#FCFCFC</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="negro_texto">#212121</color>
+    <color name="gris_claro">#9E9E9E</color>
+    <color name="rojo_error">#B71C1C</color>
+    <color name="verde_exito">#2E7D32</color>
+    <color name="negro">#FF000000</color>
+    <color name="Naranja_quemado">#D2691E</color>
+
+    <!-- Colores de estado (adicionales) -->
+    <color name="roble_pressed">#6D4C41</color>    <!-- Fondo del botón cuando se presiona -->
+    <color name="roble_disabled">#BDBDBD</color>   <!-- Botón deshabilitado (gris) -->
+    <color name="cuero_pressed">#5D4037</color>    <!-- Elementos de la barra de navegación al presionarlos -->
+    <color name="focus_ring">#00897B</color>       <!-- Borde de foco para accesibilidad (navegación por teclado) -->
+    <color name="sombra">#000000</color>           <!-- Sombras de tarjetas y elevaciones -->
+    <color name="color_focus">#00897B</color>      <!-- Teal/Agua marina, igual que en la web -->
+
+    <!-- Colores para modo oscuro (fondo oscuro, texto claro) -->
+    <color name="roble_dark">#A07A6B</color>      <!-- Una versión más clara del marrón roble -->
+    <color name="cuero_dark">#5D4037</color>      <!-- Versión más clara del cuero oscuro -->
+    <color name="arena_dark">#3E2C28</color>      <!-- Fondo de tarjetas en modo oscuro -->
+    <color name="fondo_oscuro">#1E1A18</color>    <!-- Fondo general oscuro (casi negro) -->
+
+    <!-- Colores para el Switch -->
+    <color name="switch_track_on">#00897B</color>   <!-- Cian (activo) -->
+    <color name="switch_track_off">#BDBDBD</color>  <!-- Gris claro (inactivo) -->
+    <color name="switch_thumb_on">#00897B</color>   <!-- Cian (activo) -->
+    <color name="switch_thumb_off">#F5F5F5</color>  <!-- Blanco/gris muy claro (inactivo) -->
+
+</resources>

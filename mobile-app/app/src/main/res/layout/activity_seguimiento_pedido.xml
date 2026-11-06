@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/arena">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/TituloPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seguimiento_estado"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Barra de progreso (4 pasos) -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_seguimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:indicatorColor="@color/roble"
+            android:max="4"
+            android:progress="0" />
+
+        <!-- Etiquetas de los pasos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/step1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/seguimiento_confirmado" />
+
+            <TextView
+                android:id="@+id/step2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/seguimiento_preparacion" />
+
+            <TextView
+                android:id="@+id/step3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/seguimiento_listo" />
+
+            <TextView
+                android:id="@+id/step4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/seguimiento_servido" />
+        </LinearLayout>
+
+        <!-- Código de entrega (solo para domicilio, se muestra condicional) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_codigo_entrega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carrito_codigo_entrega"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_codigo_entrega"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/codigo_entrega_ejemplo"
+                    android:textSize="32sp"
+                    android:textColor="@color/roble"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botones de acción -->
+        <Button
+            android:id="@+id/btn_detalles"
+            style="@style/ButtonSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seguimiento_detalles"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            style="@style/ButtonSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seguimiento_cancelar"
+            android:backgroundTint="@color/rojo_error"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

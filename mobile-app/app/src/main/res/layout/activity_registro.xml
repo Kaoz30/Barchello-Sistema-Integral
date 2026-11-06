@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/cuero">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp">
+
+        <!-- Tarjeta blanca centrada (mismo estilo que login) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="32dp"
+            android:maxWidth="400dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="32dp">
+
+                <!-- Logo -->
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/logo_barchello"
+                    android:contentDescription="@string/logo_desc"
+                    android:layout_marginBottom="-6dp" />
+
+                <!-- Título -->
+                <TextView
+                    style="@style/TituloPrincipal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registro_titulo"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- ==================== CAMPO NOMBRE COMPLETO ==================== -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_registro_nombre"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:hint="@string/registro_nombre"
+                    android:textColor="@color/roble"
+                    app:boxBackgroundColor="@color/Gray99"
+                    app:boxStrokeColor="@color/input_focus_selector"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintTextColor="@color/input_focus_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_registro_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:drawableStart="@drawable/ic_person"
+                        android:drawableTint="@color/roble"
+                        android:drawablePadding="12dp"
+                        android:textColor="@color/cuero" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ==================== CAMPO EMAIL ==================== -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_registro_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:hint="@string/registro_email"
+                    app:boxBackgroundColor="@color/Gray99"
+                    app:boxStrokeColor="@color/input_focus_selector"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintTextColor="@color/input_focus_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_registro_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:drawableStart="@drawable/ic_email"
+                        android:drawableTint="@color/roble"
+                        android:drawablePadding="12dp"
+                        android:textColor="@color/cuero" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ==================== CAMPO TELÉFONO ==================== -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_registro_telefono"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:hint="@string/registro_telefono"
+                    app:boxBackgroundColor="@color/Gray99"
+                    app:boxStrokeColor="@color/input_focus_selector"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintTextColor="@color/input_focus_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_registro_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:drawableTint="@color/roble"
+                        android:drawablePadding="12dp"
+                        android:textColor="@color/cuero" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ==================== CAMPO CONTRASEÑA ==================== -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_registro_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:hint="@string/registro_password"
+                    app:boxBackgroundColor="@color/Gray99"
+                    app:boxStrokeColor="@color/input_focus_selector"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_eye_slash"
+                    app:endIconTint="#BFBCBA"
+                    app:hintTextColor="@color/input_focus_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_registro_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:drawableStart="@drawable/ic_lock"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="@color/roble"
+                        android:textColor="@color/cuero" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ==================== CAMPO CONFIRMAR CONTRASEÑA ==================== -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_registro_confirmar"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:hint="@string/registro_confirmar"
+                    app:boxBackgroundColor="@color/Gray99"
+                    app:boxStrokeColor="@color/input_focus_selector"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_eye_slash"
+                    app:endIconTint="#BFBCBA"
+                    app:hintTextColor="@color/input_focus_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_registro_confirmar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:drawableStart="@drawable/ic_lock"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="@color/roble"
+                        android:textColor="@color/cuero" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ==================== CHECKBOX TÉRMINOS Y CONDICIONES ==================== -->
+                <CheckBox
+                    android:id="@+id/cb_terminos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registro_terminos"
+                    android:textColor="@color/cuero"
+                    android:layout_marginBottom="18dp"
+                    android:paddingVertical="8dp" />
+
+                <!-- ==================== BOTÓN REGISTRAR ==================== -->
+                <Button
+                    android:id="@+id/btn_registrar"
+                    style="@style/ButtonPrimario"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/registro_btn"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    app:cornerRadius="28dp" />
+
+                <!-- ==================== ENLACE A LOGIN ==================== -->
+                <TextView
+                    android:id="@+id/tv_ir_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_ir_login"
+                    android:textColor="@color/roble"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingVertical="8dp"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@null" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

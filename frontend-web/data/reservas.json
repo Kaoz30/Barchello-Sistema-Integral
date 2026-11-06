@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "cliente": "Ricardo Avendaño",
+    "fecha": "2026-05-20",
+    "hora": "19:30",
+    "personas": 4,
+    "mesa": "Mesa 2",
+    "estado": "Confirmada",
+    "sucursal_id": 1
+  },
+  {
+    "id": 2,
+    "cliente": "Fernando Niño",
+    "fecha": "2026-05-20",
+    "hora": "20:00",
+    "personas": 2,
+    "mesa": "Mesa 1",
+    "estado": "Pendiente",
+    "sucursal_id": 1
+  },
+  {
+    "id": 3,
+    "cliente": "María López",
+    "fecha": "2026-05-21",
+    "hora": "21:00",
+    "personas": 6,
+    "mesa": "Mesa 5",
+    "estado": "Confirmada",
+    "sucursal_id": 1
+  }
+]

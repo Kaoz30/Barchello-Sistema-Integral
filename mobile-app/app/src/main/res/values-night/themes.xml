@@ -1,0 +1,43 @@
+<resources>
+    <!-- Tema para modo oscuro (night)  -->
+    <style name="Theme.BarchelloCliente" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores principales adaptados para modo oscuro -->
+        <item name="colorPrimary">@color/roble_dark</item>
+        <item name="colorPrimaryVariant">@color/cuero_dark</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorSecondary">@color/arena_dark</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+
+        <!-- Barra de estado y fondo general -->
+        <item name="android:statusBarColor">@color/cuero_dark</item>
+        <item name="android:windowBackground">@color/fondo_oscuro</item>
+        <item name="android:fontFamily">@font/barchello_fonts</item>
+
+        <!-- Texto por defecto claro sobre fondo oscuro -->
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textColorSecondary">@color/gris_claro</item>
+    </style>
+
+    <!-- Estilo para botón primario (marrón roble) -->
+    <style name="ButtonPrimario" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/roble</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Estilo para botón secundario (borde roble, fondo transparente) -->
+    <style name="ButtonSecundario" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/roble</item>
+        <item name="android:textColor">@color/roble</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Estilo para títulos principales (Playfair Display) -->
+    <style name="TituloPrincipal">
+        <item name="android:fontFamily">@font/playfairdisplay_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/cuero</item>
+    </style>
+</resources>

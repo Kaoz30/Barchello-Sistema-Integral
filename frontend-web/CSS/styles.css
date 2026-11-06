@@ -1,0 +1,1433 @@
+/* ==========================================
+   HOJA DE ESTILOS EXTERNA COMPARTIDA
+   Proyecto: Barchello Bávaro Pub
+   Framework base: Bootstrap 5.3
+   ========================================== */
+
+/* ---------- 1. PALETA DE COLORES (variables CSS) ---------- */
+:root {
+    --color-cuero: #3E2723;
+    --color-roble: #8D6E63;
+    --color-arena: #EFEBE9;
+    --color-arena-light: rgba(239, 235, 233, 0.3);
+    --font-titulos: 'Playfair Display', serif;
+    --font-cuerpo: 'Roboto', sans-serif;
+}
+
+/* ---------- 2. ESTILOS BASE ---------- */
+body {
+    font-family: var(--font-cuerpo);
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* ---------- 3. CLASES DE COLOR PERSONALIZADAS ---------- */
+.bg-cuero { background-color: var(--color-cuero) !important; }
+.bg-roble { background-color: var(--color-roble) !important; }
+.bg-arena { background-color: var(--color-arena) !important; }
+.bg-arena-light { background-color: var(--color-arena-light) !important; }
+.text-cuero { color: var(--color-cuero) !important; }
+.text-roble { color: var(--color-roble) !important; }
+.text-arena { color: var(--color-arena) !important; }
+.border-arena { border-color: var(--color-arena) !important; }
+
+/* ---------- 4. TIPOGRAFÍA ---------- */
+.titulo-principal {
+    font-family: var(--font-titulos);
+    font-weight: 700;
+}
+
+.titulo-nav {
+    font-family: var(--font-titulos);
+    font-size: 1.2rem;
+}
+
+/* ---------- 5. TARJETA DE LOGIN ---------- */
+.card-login {
+    border-radius: 20px;
+    border: none;
+    max-width: 450px;
+    width: 100%;
+}
+
+/* ---------- 6. BARRA DE NAVEGACIÓN ---------- */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.2s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Efecto hover/activo para iconos PNG en la barra de navegación */
+.navbar-dark .navbar-nav .nav-link img {
+    filter: brightness(0) invert(1);      /* color blanco base */
+    transition: opacity 0.2s ease, filter 0.2s ease;
+    opacity: 0.8;
+}
+.navbar-dark .navbar-nav .nav-link:hover img,
+.navbar-dark .navbar-nav .nav-link.active img {
+    opacity: 1;
+    filter: brightness(0) invert(1) drop-shadow(0 0 0.5px rgba(255,255,255,0.9));
+}
+
+/* ---------- 7. TABLAS ---------- */
+.table-hover tbody tr:hover {
+    background-color: var(--color-arena-light);
+}
+
+/* ---------- 8. RESPONSIVE ---------- */
+@media (max-width: 576px) {
+    .titulo-principal { font-size: 1.5rem; }
+    .card-login { margin: 0 10px; }
+}
+
+/* ---------- 9. ACCESIBILIDAD ---------- */
+*:focus-visible {
+    outline: 2px solid var(--color-roble);
+    outline-offset: 2px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- 10. BOTONES 3D Y MEJORAS VISUALES GLOBALES ---------- */
+
+/* Botones con efecto 3D */
+.btn-roble {
+    background-color: var(--color-roble);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+.btn-roble:hover {
+    background-color: #6d4c41;
+    color: #fff;
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.btn-roble:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Mismo efecto para botones outline (menos intenso) */
+.btn-outline-roble {
+    color: var(--color-roble);
+    border: 1px solid var(--color-roble);
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+.btn-outline-roble:hover {
+    background-color: var(--color-roble);
+    color: #fff;
+    transform: scale(1.03);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.btn-outline-roble:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Inputs de formulario con estilo login */
+.form-control {
+    border: none;
+    border-bottom: 1px solid var(--color-roble);
+    border-radius: 6px;
+    background-color: rgba(239, 235, 233, 0.20);
+    font-weight: 400;
+    color: var(--color-cuero);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-control:focus {
+    border-bottom: 1.5px solid #00897B;
+    box-shadow: 0 1px 0 0 #00897B;
+    background-color: rgba(239, 235, 233, 0.25);
+}
+
+/* Inputs con icono integrado (para formularios como reservas, compras, etc.) */
+.input-group-text {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-roble);
+    color: var(--color-roble);
+    border-radius: 0;
+}
+
+/* ---------- 11. TARJETAS CON ESTILO LOGIN ---------- */
+.card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+/* ---------- 12. FILAS DE TABLA CON TRANSICIÓN SUAVE ---------- */
+.table-hover tbody tr {
+    transition: background-color 0.2s ease;
+}
+.table-hover tbody tr:hover {
+    background-color: rgba(239, 235, 233, 0.5);
+}
+
+/* ---------- 13.  BARRA DE NAVEGACIÓN ---------- */
+
+/* ---------- LOGO REDONDO EN LA BARRA (FIX DEFINITIVO) ---------- */
+.navbar-brand img {
+    /* Dimensiones fijas y obligatorias */
+    width: 45px;
+    height: 45px;
+    
+    /* Forzar cuadrado perfecto antes de cargar */
+    aspect-ratio: 1 / 1;
+    
+    /* Círculo perfecto (50% de 45x45 = círculo) */
+    border-radius: 50%;
+    
+    /* Recortar cualquier exceso si la imagen no es cuadrada */
+    object-fit: cover;
+    object-position: center;
+    
+    /* Comportamiento dentro del flex container */
+    display: block;           /* Elimina espacio inline fantasma */
+    flex-shrink: 0;           /* No se contrae en flex */
+    
+    /* Estética */
+    background-color: #ffff; /* Color de fondo mientras carga */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    
+    /* Optimización de renderizado */
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0); /* Fuerza composición GPU */
+}
+
+/* El hover del brand NO debe deformar el logo */
+.navbar-brand:hover img {
+    transform: translateZ(0) !important; /* Mantiene GPU sin escalar */
+    scale: 1 !important;
+}
+
+/* 🔧 CRÍTICO: Asegurar que el contenedor padre centra verticalmente */
+.navbar-brand {
+    display: flex !important;
+    align-items: center !important;  /* ← ESTO es lo que centra el logo */
+    gap: 0.5rem;
+}
+
+/* ---------- CENTRADO Y EFECTO HOVER DEL BRAND (NOMBRE DEL PUB) - v2 BLINDADO ---------- */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Transición suave para el efecto de botón sólido */
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s ease, color 0.2s ease;
+}
+
+/* Hover: El contenedor completo (logo + texto) se expande ligeramente */
+.navbar-brand:hover {
+    color: var(--color-arena);                             
+    transform: scale(1.03);               
+    text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    opacity: 0.95;
+}
+
+/* Active: Sensación de presión al hacer clic */
+.navbar-brand:active {
+    transform: scale(0.97);
+    opacity: 1;
+}
+
+/* ---------- ALTURA COMPACTA DE LA BARRA DE NAVEGACIÓN ---------- */
+.navbar {
+    padding-top: 0.18rem;
+    padding-bottom: 0.18rem;
+}
+
+/* ---------- FOOTER PEGADO AL FONDO ---------- */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-content {
+    flex: 1 0 auto;
+}
+
+/* ---------- AJUSTE DE NAVBAR EN PANTALLAS MEDIANAS ---------- */
+/* Tamaño normal para monitores grandes (≥1400px) usa los estilos base */
+
+/* Tamaño reducido para laptops típicas (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .navbar-nav .nav-link {
+        font-size: 0.85rem;      /* letra más pequeña */
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+        white-space: nowrap;       /* evita salto de línea */
+    }
+    .navbar-nav .nav-link i {
+        font-size: 0.75rem;       /* icono ligeramente menor */
+    }
+     .navbar-brand {
+        font-size: 1rem;         /* reduce el nombre del pub */
+    }
+    .navbar {
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+    }
+}
+
+/* Opcional: espaciado cómodo para monitores grandes (≥1400px) */
+@media (min-width: 1400px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* ----------14 MENÚ HAMBURGUESA COMPACTO (TABLETS / MÓVILES) ---------- */
+@media (max-width: 1199.98px) {
+    .navbar-collapse .navbar-nav .nav-link {
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 0.9rem;
+    }
+    .navbar-collapse .navbar-nav .nav-link i {
+        font-size: 0.8rem;
+        margin-right: 0.3rem;
+    }
+}
+
+/* ---------- 15 CONTROLES DEL CAROUSEL DISCRETOS ---------- */
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;                         /* que el área no sea gigante */
+    opacity: 0.4;                        /* semi-transparente en reposo */
+    transition: opacity 0.25s ease;      /* suavizado al interactuar */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;                          /* se vuelve completamente visible al pasar el ratón */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent;       /* sin fondo sólido */
+    background-size: 60%;                /* icono más pequeño */
+    border-radius: 50%;
+    padding: 0.8rem;                     /* área de toque cómoda pero reducida */
+    box-shadow: none;                    /* sin sombra */
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* fondo muy tenue al pasar */
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1); /* anillo sutil */
+}
+
+.carousel-control-prev {
+    left: -10px;   /* los aleja un poco del borde de la tarjeta */
+}
+.carousel-control-next {
+    right: -10px;
+}
+
+/* ---------- INDICADORES DEL CAROUSEL MÁS DISCRETOS ---------- */
+.carousel-indicators {
+    bottom: -45px;                     /* baja los dots 30px por debajo del carrusel */
+}
+.carousel-indicators [data-bs-target] {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--color-roble);
+    opacity: 0.3;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--color-roble);
+    transform: scale(1.1);
+}
+
+
+/* ============================================
+    CONTROL DE ACCESO POR ROL (RBAC) - Anti-FOUC
+   ============================================
+   ESTRATEGIA: "Hidden by Default"
+   
+   Por defecto, TODOS los elementos con data-role
+   están OCULTOS mediante CSS. Esto ocurre ANTES
+   de que JavaScript cargue, eliminando el parpadeo.
+   
+   El JavaScript (auth.js) solo AGREGA la clase
+   .visible-por-rol a los elementos que el usuario
+   tiene permiso de ver.
+*/
+
+/* 1. Ocultar TODO elemento con data-role por defecto */
+[data-role] {
+    display: none !important;
+}
+
+/* 2. Mostrar SOLO si JavaScript agregó la clase .visible-por-rol */
+[data-role].visible-por-rol {
+    display: revert !important;
+}
+
+/* 3. Ajustes específicos por tipo de elemento HTML */
+/* Los <li> del navbar deben mostrarse como list-item */
+li[data-role].visible-por-rol {
+    display: list-item !important;
+}
+
+/* Las tarjetas y columnas del dashboard */
+div[data-role].visible-por-rol {
+    display: block !important;
+}
+
+/* Los enlaces y botones (EXCLUYE los del menú lateral) */
+a[data-role].visible-por-rol:not(.offcanvas-nav-link),
+button[data-role].visible-por-rol {
+    display: inline-block !important;
+}
+
+/* Los enlaces del menú lateral SIEMPRE en flex:
+   icono + texto + flecha en una sola fila alineada */
+a.offcanvas-nav-link[data-role].visible-por-rol {
+    display: flex !important;
+}
+
+/* Las filas de Bootstrap que contengan elementos con data-role */
+.row[data-role].visible-por-rol {
+    display: flex !important;
+}
+
+/* Excepción: el botón de cerrar sesión siempre visible si hay sesión activa */
+/* (se maneja desde JavaScript agregando la clase al body) */
+body.sesion-activa #btnCerrarSesion {
+    display: inline-block !important;
+}
+
+/* 4. Loader inicial mientras se valida la sesión */
+body.validando-sesion main,
+body.validando-sesion footer {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.sesion-validada main,
+body.sesion-validada footer {
+    opacity: 1;
+}
+
+
+/* ============================================
+    SECCIÓN: DROPDOWN DE USUARIO EN NAVBAR
+   ============================================
+   Nota para mí: Esta sección controla el botón de 
+   perfil que está en la esquina superior derecha.
+   ============================================ */
+
+/* --- 1. El botón píldora del Navbar --- */
+.user-dropdown-toggle {
+    padding: 0.3rem 0.6rem !important;
+    border-radius: 50px !important;
+    transition: background-color 0.2s ease !important;
+    background-color: rgba(255,255,255,0.08);
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.user-dropdown-toggle:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+}
+
+/* --- 2. El Avatar (Círculo con iniciales) --- */
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-roble) 0%, #6d4c41 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    font-family: var(--font-titulos);
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* --- 3. Textos: Nombre y Rol --- */
+.user-info {
+    min-width: 80px;   /* Ancho mínimo fijo: evita contracción */
+    max-width: 100px;   /* Ancho máximo */
+    overflow: hidden;   /* Seguridad extra */
+}
+
+.user-name {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #fff;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.user-role {
+    font-size: 0.68rem;
+    color: var(--color-arena);
+    text-transform: capitalize;
+    opacity: 0.8;
+    line-height: 1.2;
+}
+
+/* PC: avatar tamaño normal */
+@media (min-width: 1200px) {
+    .user-avatar {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+    SECCIÓN: EL MENÚ DESPLEGABLE (POPUP)
+   ============================================ */
+
+/* --- 4. La caja del menú --- */
+.user-dropdown-menu {
+    border: none !important;
+    border-radius: 12px !important;
+    min-width: 200px !important;
+    padding: 0.5rem 0 !important;
+    margin-top: 0.5rem !important;
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.08) !important;
+}
+
+.dropdown-header-user {
+    padding: 0.25rem 1rem;
+}
+
+/* Avatar más grande cuando ya estoy dentro del menú */
+.user-avatar-lg {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-roble) 0%, #6d4c41 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: var(--font-titulos);
+    flex-shrink: 0;
+}
+
+/* --- 5. Las opciones del menú (Items) ---
+   Los puse como flex para alinear los íconos de 
+   Bootstrap perfectamente con el texto. El hover 
+   tiene un padding-left extra (1.25rem) para dar 
+   sensación de movimiento al pasar el mouse. */
+.user-dropdown-menu .dropdown-item {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: #333;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+}
+
+.user-dropdown-menu .dropdown-item:hover {
+    background-color: var(--color-arena-light);
+    color: var(--color-cuero);
+    padding-left: 1.25rem;
+}
+
+/* Cuidado con el item de "Cerrar Sesión" (.text-danger): 
+   le di un hover rojizo suave para que se note que 
+   es una acción destructiva. */
+.user-dropdown-menu .dropdown-item.text-danger:hover {
+    background-color: rgba(183, 28, 28, 0.08);
+    color: #b71c1c !important;
+}
+
+.user-dropdown-menu .dropdown-divider {
+    margin: 0.25rem 0;
+    border-color: rgba(0,0,0,0.08);
+}
+
+/* ============================================
+    SECCIÓN: RESPONSIVE (Menú Hamburguesa)
+   ============================================ */
+@media (max-width: 1199.98px) {
+    /* SIN separador visual */
+    .user-dropdown {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    /* Avatar compacto en móvil/tablet */
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+    .user-name {
+        font-size: 0.75rem;
+        max-width: 90px;
+    }
+    .user-role {
+        font-size: 0.62rem;
+    }
+    .user-dropdown-toggle {
+        padding: 0.25rem 0.5rem !important;
+    }
+    
+    /* CAMBIO CRÍTICO: MANTENER DROPDOWN FLOTANTE (eliminar position: static) */
+    .user-dropdown-menu {
+        position: absolute !important; /* ← Cambiado de static a absolute */
+        right: 0; /* ← Alinear a la derecha */
+        top: 100%; /* ← Debajo del botón */
+        float: none;
+        width: 140px; /* ← Ancho fijo compacto (antes era 100%) */
+        min-width: 140px;
+        background: #fff; /* ← Fondo blanco sólido */
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.08) !important; /* ← Sombra restaurada */
+        margin-top: 0.5rem !important;
+        border-radius: 12px !important;
+        z-index: 1060; /* ← Encima del offcanvas (1055) */
+    }
+    
+    /* Colores del dropdown en móvil (texto oscuro sobre fondo blanco) */
+    .user-dropdown-menu .dropdown-item {
+        color: #333; /* ← Texto oscuro (antes era blanco) */
+    }
+    
+    .user-dropdown-menu .dropdown-item:hover {
+        background-color: var(--color-arena-light); /* ← Fondo arena claro */
+        color: var(--color-cuero); /* ← Texto cuero */
+    }
+    
+    .user-dropdown-menu .dropdown-item.text-danger {
+        color: #dc3545 !important; /* ← Rojo estándar Bootstrap */
+    }
+    
+    .user-dropdown-menu .dropdown-header-user {
+        color: var(--color-cuero); /* ← Texto oscuro */
+    }
+    
+    .user-dropdown-menu .dropdown-divider {
+        border-color: rgba(0,0,0,0.08); /* ← Borde sutil */
+    }
+}
+
+/* ============================================
+    SECCIÓN: MODAL CAMBIAR ROL / TURNO
+   ============================================
+   Estilos para cuando necesito simular o cambiar 
+   el rol/turno desde la interfaz. */
+
+/* --- 6. Estructura base del Modal --- */
+.modal-rol-turno .modal-content {
+    border-radius: 16px;
+    border: none;
+}
+
+.modal-rol-turno .modal-header {
+    background: var(--color-cuero);
+    color: #fff;
+    border-radius: 16px 16px 0 0;
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-rol-turno .modal-title {
+    font-family: var(--font-titulos);
+    font-weight: 700;
+}
+
+/* --- 7. Tarjetas de Selección de Rol ---
+   Cada opción es una tarjeta gigante que actúa como 
+   botón. Tiene un borde gris que cambia a color roble 
+   al hacer hover o cuando está activo (.active). */
+.rol-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 0.75rem;
+    background: #fff;
+}
+
+.rol-option:hover {
+    border-color: var(--color-roble);
+    background: var(--color-arena-light);
+    /* Micro-interacción: la tarjeta "se levanta" */
+    transform: translateY(-1px);
+}
+
+.rol-option.active {
+    border-color: var(--color-roble);
+    background: var(--color-arena-light);
+    box-shadow: 0 4px 12px rgba(141, 110, 99, 0.2);
+}
+
+/* El ícono también cambia de fondo arena a roble 
+   sólido cuando la opción está seleccionada. */
+.rol-option-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-arena);
+    color: var(--color-cuero);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.rol-option.active .rol-option-icon {
+    background: var(--color-roble);
+    color: #fff;
+}
+
+.rol-option-info h6 {
+    margin: 0 0 0.25rem;
+    font-weight: 600;
+    color: var(--color-cuero);
+}
+
+.rol-option-info small {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+
+/* ==========================================
+ *   FASE 3: ESTILOS PREMIUM MÓDULO MENÚ
+ *  Estética "Carta de Restaurante Artesanal"
+ * ========================================== */
+
+/* Tarjeta con elevación dinámica */
+.producto-card {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 16px !important;
+    background: #fff;
+}
+.producto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(62, 39, 35, 0.12);
+}
+
+/* Wrapper de imagen con altura controlada */
+.producto-imagen-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: var(--color-arena);
+}
+
+/* Imagen con zoom suave al hover */
+.producto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.producto-card:hover .producto-imagen {
+    transform: scale(1.08);
+}
+
+/* Overlay degradado sutil (aparece en hover) */
+.producto-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(62, 39, 35, 0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.producto-card:hover .producto-overlay {
+    opacity: 1;
+}
+
+/* Badge flotante con efecto glassmorphism */
+.producto-badge-position {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+}
+.producto-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.4em 0.75em;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.producto-badge.bg-success {
+    background-color: rgba(40, 167, 69, 0.9) !important;
+    color: #fff !important;
+}
+.producto-badge.bg-secondary {
+    background-color: rgba(108, 117, 125, 0.9) !important;
+    color: #fff !important;
+}
+
+/* Tipografía refinada de la tarjeta */
+.producto-nombre {
+    font-family: var(--font-titulos);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-cuero);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 2.6rem;
+}
+.producto-categoria {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 0.3em 0.7em;
+    border-radius: 6px;
+}
+.producto-descripcion {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.4rem;
+}
+.producto-precio {
+    font-family: var(--font-titulos);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-roble);
+    letter-spacing: -0.5px;
+}
+
+/* Filtros tipo "píldora" */
+.filtro-categoria {
+    border-radius: 50px !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.45rem 1.1rem !important;
+    transition: all 0.25s ease;
+    border-width: 1.5px;
+}
+.filtro-categoria.active {
+    background-color: var(--color-roble) !important;
+    color: #fff !important;
+    border-color: var(--color-roble) !important;
+    box-shadow: 0 4px 12px rgba(141, 110, 99, 0.35);
+    transform: translateY(-1px);
+}
+.filtro-categoria:not(.active):hover {
+    background-color: var(--color-arena);
+    color: var(--color-cuero);
+    transform: translateY(-1px);
+}
+
+/* Accesibilidad: foco visible en botones de acción */
+.producto-card .btn:focus-visible {
+    outline: 2px solid var(--color-roble);
+    outline-offset: 2px;
+}
+
+
+/* ============================================
+   16+17 v3 — NAVBAR STICKY + OFFCANVAS OSCURO FLOTANTE
+   (Bloque definitivo: navbar + panel lateral)
+   ============================================ */
+
+/* --- Altura del navbar por dispositivo --- */
+:root { --altura-navbar: 56px; }
+@media (max-width: 575.98px) { :root { --altura-navbar: 52px; } }
+@media (min-width: 992px)    { :root { --altura-navbar: 60px; } }
+@media (min-width: 1400px)   { :root { --altura-navbar: 64px; } }
+
+/* --- Navbar: sticky, siempre visible y clicable --- */
+.navbar-barchello {
+    min-height: var(--altura-navbar);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+}
+.navbar-barchello .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;               /* prohibido saltar de línea */
+    min-height: calc(var(--altura-navbar) - 8px);
+}
+
+/* Zona izquierda: grid + marca */
+.navbar-left-group { display: flex; align-items: center; gap: 0.5rem; min-width: 0; }
+
+/* Disparador grid (44px = norma de pulgar) */
+.btn-hamburger {
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    border: none; border-radius: 12px;
+    background: rgba(255,255,255,0.10);
+    color: var(--color-arena);
+    font-size: 1.25rem;
+    flex-shrink: 0; cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+.btn-hamburger:hover  { background: rgba(255,255,255,0.18); }
+.btn-hamburger:active { transform: scale(0.92); }
+.btn-hamburger i { display: block; transition: transform 0.3s ease; }
+.btn-hamburger.icono-abierto { background: rgba(255,255,255,0.22); }
+.btn-hamburger.icono-abierto i { transform: rotate(90deg); 
+    -webkit-transform: rotate(90deg); /* Safari */
+    -moz-transform: rotate(90deg); /* Firefox */}
+
+/* Marca BaBah */
+.navbar-brand-link { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; min-width: 0; }
+.navbar-brand-logo {
+    width: 38px; height: 38px; border-radius: 50%;
+    object-fit: cover; background: #fff; flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.navbar-brand-text {
+    font-family: var(--font-titulos); font-weight: 700;
+    color: #fff; font-size: 1.1rem; letter-spacing: 0.5px; white-space: nowrap;
+}
+@media (max-width: 575.98px) {
+    .navbar-brand-logo { width: 34px; height: 34px; }
+    .navbar-brand-text { font-size: 1rem; }
+}
+@media (min-width: 992px) {
+    .navbar-brand-logo { width: 42px; height: 42px; }
+    .navbar-brand-text { font-size: 1.25rem; }
+}
+@media (min-width: 1400px) {
+    .navbar-brand-logo { width: 45px; height: 45px; }
+    .navbar-brand-text { font-size: 1.3rem; }
+}
+
+/* Píldora del usuario (derecha) */
+.btn-user-dropdown {
+    display: flex; align-items: center; gap: 8px;
+    border: none; border-radius: 50px;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px 4px 4px;
+    color: #fff; cursor: pointer; flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+.btn-user-dropdown:hover { background: rgba(255,255,255,0.15); }
+@media (max-width: 575.98px) {
+    .btn-user-dropdown { padding: 4px; }
+    .btn-user-dropdown.dropdown-toggle::after { display: none; }
+}
+
+/* ============================================
+   OFFCANVAS v3: panel oscuro, DELANTE de todo,
+   nace DEBAJO del navbar (no lo tapa, no lo empuja)
+   ============================================ */
+.offcanvas-barchello.offcanvas-start {
+    position: fixed;
+    top: calc(var(--altura-navbar) + 5px);
+    left: 8px;
+    bottom: 8px;
+    /* CAMBIO: Altura fija profesional */
+    height: calc(100vh - var(--altura-navbar) - 16px); 
+    width: 250px;                    /* ancho fijo compacto (adiós max-content) */
+    border-radius: 18px;
+    border: none;
+    background: var(--color-cuero);
+    color: var(--color-arena);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    z-index: 1055;                   /* DELANTE de todo (navbar 1050, backdrop 1040) */
+}
+
+/* Ajuste para móvil */
+@media (max-width: 575.98px) {
+    .offcanvas-barchello.offcanvas-start {
+        width: 200px;
+        border-radius: 14px;
+        top: calc(var(--altura-navbar) + 2px);
+        left: 6px; bottom: 6px;
+        /* CAMBIO: Altura fija en móvil */
+        height: calc(100vh - var(--altura-navbar) - 12px);
+    }
+}
+
+/* Backdrop sin blur */
+.offcanvas-backdrop {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(0,0,0,0.25);
+    z-index: 1040;
+}
+
+/* Header del panel (sin X: el cierre es el grid giratorio) */
+.offcanvas-header-barchello {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid rgba(239,235,233,0.12);
+}
+.offcanvas-brand-link { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.offcanvas-brand-logo { width: 30px; height: 30px; border-radius: 50%; background: #fff; object-fit: cover; }
+.offcanvas-brand-text { font-family: var(--font-titulos); font-weight: 700; color: #fff; font-size: 1.05rem; }
+
+/* Franja de usuario */
+.offcanvas-user-info {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.4rem 0.9rem;
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(239,235,233,0.10);
+}
+.offcanvas-user-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-roble), #6d4c41);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.8rem; font-family: var(--font-titulos); flex-shrink: 0;
+}
+.offcanvas-user-name { font-size: 0.82rem; font-weight: 600; color: #fff; line-height: 1.15; }
+.offcanvas-user-role { font-size: 0.68rem; color: var(--color-arena); opacity: 0.75; text-transform: capitalize; }
+
+/* Cuerpo */
+.offcanvas-body-barchello { padding: 0.5rem 0.6rem; overflow-y: auto; }
+.offcanvas-section-title {
+    font-size: 0.62rem; font-weight: 700; font-family: var(--font-cuerpo);
+    letter-spacing: 1.5px;
+    text-transform: uppercase; color: rgba(239,235,233,0.45);
+    padding: 0.55rem 0.35rem 0.2rem;
+}
+.offcanvas-nav { display: flex; flex-direction: column; gap: 2px; margin-bottom: 0.35rem; }
+
+/* Ítem del módulo: una fila, 44px de alto */
+.offcanvas-nav-link {
+    display: flex; align-items: center; gap: 0.5rem;
+    min-height: 42px;
+    padding: 0.35rem 0.5rem 0.35rem 0.55rem;
+    border-radius: 10px;
+    color: rgba(239,235,233,0.85);
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-family: var(--font-cuerpo);
+    position: relative;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+.offcanvas-nav-icon {
+    width: 28px; height: 28px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(239,235,233,0.12); color: var(--color-arena);
+    font-size: 0.95rem; flex-shrink: 0;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+.offcanvas-nav-icon img {
+    width: 18px; height: 18px; object-fit: contain;
+    filter: brightness(0) invert(1); opacity: 0.85;
+}
+/* Chevron pegado al texto (ya no se va al extremo) */
+.offcanvas-nav-chevron {
+    margin-left: auto;
+    font-size: 0.55rem;
+    color: rgba(239,235,233,0.35);
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+.offcanvas-nav-link:hover { background: rgba(141,110,99,0.25); color: #fff; }
+.offcanvas-nav-link:hover .offcanvas-nav-icon { background: var(--color-roble); color: #fff; }
+.offcanvas-nav-link:hover .offcanvas-nav-chevron { transform: translateX(2px); color: var(--color-arena); }
+.offcanvas-nav-link:active { transform: scale(0.98); }
+.offcanvas-nav-link.active {
+    background: var(--color-roble);
+    color: #fff; font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.offcanvas-nav-link.active .offcanvas-nav-icon { background: rgba(255,255,255,0.18); color: #fff; }
+.offcanvas-nav-link.active .offcanvas-nav-chevron { color: #fff; }
+
+/* Módulos futuros */
+.offcanvas-nav-link.disabled-future { opacity: 0.45; pointer-events: none; cursor: not-allowed; }
+.offcanvas-nav-link.disabled-future .offcanvas-nav-chevron { display: none; }
+.offcanvas-future-badge {
+    font-size: 0.55rem; background: rgba(239,235,233,0.15); color: rgba(239,235,233,0.6);
+    padding: 0.1rem 0.35rem; border-radius: 4px;
+    margin-left: 0.4rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+/* RBAC: conservar flex en enlaces controlados por rol */
+a.offcanvas-nav-link[data-role].visible-por-rol { display: flex !important; }
+a.dropdown-item[data-role].visible-por-rol { display: flex !important; }
+
+.offcanvas-logout:hover { background: rgba(183,28,28,0.18); color: #ff8a80; }
+
+/* Bloqueo de scroll con panel abierto */
+body.offcanvas-open { overflow: hidden !important; }
+
+/* Celular: compacto */
+@media (max-width: 575.98px) {
+    .offcanvas-nav-link { min-height: 44px; font-size: 0.86rem; }
+    .offcanvas-nav-icon { width: 28px; height: 28px; font-size: 0.88rem; border-radius: 8px; }
+    .offcanvas-user-avatar { width: 28px; height: 28px; font-size: 0.7rem; }
+    .offcanvas-user-name { font-size: 0.78rem; }
+    .offcanvas-user-role { font-size: 0.62rem; }
+}
+
+.offcanvas-divider {
+    border: 0;
+    /* Línea sutil color arena con 15% de opacidad para que se vea sobre el cuero oscuro */
+    border-top: 1px solid rgba(239, 235, 233, 0.15);
+    margin: 0.75rem 0.5rem 0.25rem;
+    opacity: 1;
+}
+
+
+/* ============================================
+    EFECTO DINÁMICO DEL LOGO + NOMBRE (RECUPERADO 1:1 DEL ANTIGUO)
+   ============================================ */
+
+/* 1) BASE: el contenedor completo es UN solo elemento animable
+      (mismos parámetros exactos del bloque v2 BLINDADO) */
+.navbar-brand-link {
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.2s ease,
+                color 0.2s ease;
+}
+
+/* 2) BASE: el logo con capa GPU desde el inicio (antes lo tenía .navbar-brand img).
+      Si se agrega solo en hover, la capa se crea en pleno vuelo y se siente un salto. */
+.navbar-brand-logo {
+    transform: translateZ(0);
+}
+
+/* 3) BASE: el texto ahora es un <span> con color propio; antes heredaba la
+      transición del <a>. Sin esto, el color cambia de golpe = sensación brusca. */
+.navbar-brand-text {
+    transition: color 0.2s ease;
+}
+
+/* HOVER: expansión uniforme del conjunto (logo + nombre), idéntica al antiguo */
+.navbar-brand-link:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+.navbar-brand-link:hover .navbar-brand-text {
+    color: var(--color-arena);
+    text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+/* ACTIVE: sensación de presión al hacer clic */
+.navbar-brand-link:active {
+    transform: scale(0.97);
+    opacity: 1;
+}
+
+/* BLINDAJE: el logo nunca se deforma por reglas propias; solo lo escala el padre */
+.navbar-brand-link:hover .navbar-brand-logo,
+.navbar-brand-link:active .navbar-brand-logo {
+    transform: translateZ(0) !important;
+    scale: 1 !important;
+}
+
+/* Foco por teclado (accesibilidad) */
+.navbar-brand-link:focus-visible {
+    outline: 2px solid var(--color-arena);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+/* Asegurar alineación correcta del header del dropdown */
+.dropdown-header-user .d-flex {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* Prevenir que el dropdown se salga de la pantalla en móvil */
+@media (max-width: 575.98px) {
+    .user-dropdown-menu {
+        right: -8px !important;  /* Pequeño margen para que no toque el borde */
+    }
+}
+
+/* ============================================
+   ANTI-FOUC: Evitar parpadeo de textos por defecto
+   ============================================
+   Oculta los textos de relleno ("U", "Usuario", "Rol") 
+   hasta que el body tenga la clase 'sesion-validada' 
+   (clase que tu auth.js ya agrega cuando termina de cargar).
+*/
+
+/* Oculta el texto por defecto de los avatares y nombres */
+body.validando-sesion .user-avatar,
+body.validando-sesion .user-name,
+body.validando-sesion .user-role,
+body.validando-sesion .user-avatar-lg {
+    color: transparent !important; /* Hace el texto invisible temporalmente */
+    background-color: rgba(255,255,255,0.1); /* Mantiene el círculo visible pero sin letra */
+}
+
+/* CÓMO DEBE QUEDAR (CORREGIDO) */
+/* Avatar: solo ocultar la letra, NO tocar el degradado */
+body.validando-sesion .user-avatar,
+body.validando-sesion .user-avatar-lg,
+body.validando-sesion .offcanvas-user-avatar {
+    color: transparent !important;
+    /* El degradado linear-gradient permanece intacto */
+}
+
+/* Textos: ocultar con skeleton sutil */
+body.validando-sesion .user-name,
+body.validando-sesion .user-role,
+body.validando-sesion .offcanvas-user-name,
+body.validando-sesion .offcanvas-user-role {
+    color: transparent !important;
+    background-color: rgba(255,255,255,0.08) !important;
+    border-radius: 4px;
+    /* Skeleton visual mientras carga */
+}
+
+/* Restauración suave cuando auth.js termina */
+body.sesion-validada .user-avatar,
+body.sesion-validada .user-avatar-lg,
+body.sesion-validada .offcanvas-user-avatar,
+body.sesion-validada .user-name,
+body.sesion-validada .user-role,
+body.sesion-validada .offcanvas-user-name,
+body.sesion-validada .offcanvas-user-role {
+    color: inherit !important;
+    background-color: transparent !important;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+/* ============================================
+    DASHBOARD GRID - ACCESOS RÁPIDOS
+   ============================================
+   Grid adaptativo profesional con:
+   - Auto-fill: ajusta columnas automáticamente
+   - Minmax: mínimo 200px, máximo 1fr (fracción disponible)
+   - Gap consistente entre tarjetas
+   - Hover effects con elevación (aun en desarrollo)
+   ============================================ */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Tarjeta de módulo base */
+.modulo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--color-cuero);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* Hover: elevación + sombra + borde sutil */
+.modulo-card:hover:not(.modulo-futuro) {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(141, 110, 99, 0.15);
+    border-color: var(--color-roble);
+}
+
+/* Active: sensación de presión */
+.modulo-card:active:not(.modulo-futuro) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(141, 110, 99, 0.12);
+}
+
+/* Icono circular del módulo */
+.modulo-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    transition: transform 0.25s ease;
+}
+
+.modulo-card:hover:not(.modulo-futuro) .modulo-icon {
+    transform: scale(1.1);
+}
+
+/* Título del módulo */
+.modulo-card h4 {
+    font-family: var(--font-titulos);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem 0;
+    color: var(--color-cuero);
+}
+
+/* Descripción pequeña */
+.modulo-card p {
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Módulos futuros (deshabilitados) */
+.modulo-futuro {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #f8f9fa;
+}
+
+.modulo-futuro:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-color: transparent;
+}
+
+.modulo-futuro .modulo-icon {
+    background: #e9ecef !important;
+}
+
+/* ============================================
+    RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Móvil pequeño (<576px): 2 columnas */
+@media (max-width: 575.98px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .modulo-card {
+        padding: 1rem 0.75rem;
+    }
+    
+    .modulo-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+    
+    .modulo-card h4 {
+        font-size: 0.95rem;
+    }
+    
+    .modulo-card p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Tablet (576px - 991px): 3 columnas */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop (≥992px): 4 columnas */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop grande (≥1400px): 5 columnas */
+@media (min-width: 1400px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .modulo-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .modulo-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 2rem;
+    }
+}
+
+/* ============================================
+    ACCESIBILIDAD
+   ============================================ */
+
+/* Foco visible por teclado */
+.modulo-card:focus-visible {
+    outline: 3px solid var(--color-roble);
+    outline-offset: 2px;
+    border-color: var(--color-roble);
+}
+
+/* Reducir movimiento para usuarios sensibles */
+@media (prefers-reduced-motion: reduce) {
+    .modulo-card,
+    .modulo-icon {
+        transition: none;
+    }
+    
+    .modulo-card:hover:not(.modulo-futuro) {
+        transform: none;
+    }
+}
+
+/* ============================================
+ *  MÓDULO INVENTARIO — Filas resaltadas
+ * ============================================ */
+.table-danger-light {
+    background-color: rgba(211, 47, 47, 0.05) !important;
+}
+
+.table-danger-light:hover {
+    background-color: rgba(211, 47, 47, 0.1) !important;
+}

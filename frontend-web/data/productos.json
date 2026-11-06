@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hamburguesa Artesanal",
+    "descripcion": "Carne de res 200g, queso cheddar, lechuga, tomate, cebolla caramelizada, salsa especial de la casa.",
+    "precio": 18500,
+    "categoria": "Para Comer",
+    "imagen": "img/menu/hamburguesa_artesanal.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Pizza Artesanal",
+    "descripcion": "Masa artesanal, mozzarella, albahaca fresca, salsa de tomate casera.",
+    "precio": 22000,
+    "categoria": "Para Comer",
+    "imagen": "img/menu/pizza_artesanal.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 3,
+    "nombre": "Pasta Alfredo",
+    "descripcion": "Fettuccine con crema de parmesano y pollo grillado.",
+    "precio": 21000,
+    "categoria": "Para Comer",
+    "imagen": "img/menu/pasta_alfredo.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 4,
+    "nombre": "Salmón a la Plancha",
+    "descripcion": "Salmón fresco con vegetales salteados y salsa de limón.",
+    "precio": 28000,
+    "categoria": "Para Comer",
+    "imagen": "img/menu/salmon_a_la_plancha.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 5,
+    "nombre": "Alitas BBQ",
+    "descripcion": "6 piezas de alitas bañadas en salsa barbacoa ahumada.",
+    "precio": 18000,
+    "categoria": "Para Picar",
+    "imagen": "img/menu/alitas_bbq.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 6,
+    "nombre": "Nachos con Queso",
+    "descripcion": "Tortilla chips con queso derretido, guacamole y pico de gallo.",
+    "precio": 15000,
+    "categoria": "Para Picar",
+    "imagen": "img/menu/nachos_con_queso.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 7,
+    "nombre": "Dedos de Queso",
+    "descripcion": "Queso mozzarella empanizado con salsa marinara.",
+    "precio": 12000,
+    "categoria": "Para Picar",
+    "imagen": "img/menu/dedos_de_queso.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 8,
+    "nombre": "Mojito",
+    "descripcion": "Ron blanco, hierbabuena fresca, lima, azúcar de caña y soda.",
+    "precio": 18000,
+    "categoria": "Coctelería",
+    "imagen": "img/menu/mojito.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 9,
+    "nombre": "Margarita",
+    "descripcion": "Tequila, triple sec y jugo de limón fresco.",
+    "precio": 20000,
+    "categoria": "Coctelería",
+    "imagen": "img/menu/margarita.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 10,
+    "nombre": "Piña Colada",
+    "descripcion": "Ron, crema de coco y piña natural.",
+    "precio": 19000,
+    "categoria": "Coctelería",
+    "imagen": "img/menu/pina_colada.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 11,
+    "nombre": "Old Fashioned",
+    "descripcion": "Whisky, amargo de Angostura, azúcar y twist de naranja.",
+    "precio": 25000,
+    "categoria": "Coctelería",
+    "imagen": "img/menu/old_fashioned.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 12,
+    "nombre": "Cerveza Artesanal IPA",
+    "descripcion": "Cerveza artesanal 500ml con notas cítricas y amargor equilibrado.",
+    "precio": 12000,
+    "categoria": "Cervezas y Licores",
+    "imagen": "img/menu/cerveza_ipa.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 13,
+    "nombre": "Cerveza Rubia",
+    "descripcion": "Cerveza rubia suave y refrescante, botella 500ml.",
+    "precio": 9000,
+    "categoria": "Cervezas y Licores",
+    "imagen": "img/menu/cerveza_rubia.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 14,
+    "nombre": "Ron Añejo",
+    "descripcion": "Ron añejo 750ml, notas de vainilla y caramelo.",
+    "precio": 28000,
+    "categoria": "Cervezas y Licores",
+    "imagen": "img/menu/ron_anejo.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 15,
+    "nombre": "Whisky 12 años",
+    "descripcion": "Whisky escocés 750ml, madurado 12 años.",
+    "precio": 35000,
+    "categoria": "Cervezas y Licores",
+    "imagen": "img/menu/whisky.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 16,
+    "nombre": "Limonada Natural",
+    "descripcion": "Limonada natural con hierbabuena fresca.",
+    "precio": 7000,
+    "categoria": "Bebidas",
+    "imagen": "img/menu/limonada.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 17,
+    "nombre": "Jugo Natural",
+    "descripcion": "Jugo de naranja recién exprimido.",
+    "precio": 6000,
+    "categoria": "Bebidas",
+    "imagen": "img/menu/jugo_natural.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 18,
+    "nombre": "Agua con Gas",
+    "descripcion": "Agua mineral con gas, botella 500ml.",
+    "precio": 4000,
+    "categoria": "Bebidas",
+    "imagen": "img/menu/agua_con_gas.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 19,
+    "nombre": "Malteada de Vainilla",
+    "descripcion": "Malteada cremosa de vainilla con crema batida.",
+    "precio": 10000,
+    "categoria": "Bebidas",
+    "imagen": "img/menu/malteada_de_vainilla.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 20,
+    "nombre": "Café Americano",
+    "descripcion": "Café tinto negro, preparación tradicional.",
+    "precio": 5000,
+    "categoria": "Cafetería",
+    "imagen": "img/menu/cafe_americano.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 21,
+    "nombre": "Capuchino",
+    "descripcion": "Espresso con leche vaporizada y espuma cremosa.",
+    "precio": 7000,
+    "categoria": "Cafetería",
+    "imagen": "img/menu/capuchino.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 22,
+    "nombre": "Mocaccino",
+    "descripcion": "Café con chocolate y leche vaporizada.",
+    "precio": 8000,
+    "categoria": "Cafetería",
+    "imagen": "img/menu/mocaccino.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  },
+  {
+    "id": 23,
+    "nombre": "Té Chai",
+    "descripcion": "Té con especias aromáticas y leche.",
+    "precio": 6000,
+    "categoria": "Cafetería",
+    "imagen": "img/menu/te_chai.webp",
+    "disponible": true,
+    "sucursal_id": 1
+  }
+]

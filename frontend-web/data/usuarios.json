@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "sucursal_id": 1,
+    "nombre_completo": "Jonh Jiménez",
+    "email": "jonh@barchello.com",
+    "usuario": "admin",
+    "password": "1234",
+    "rol": "admin",
+    "roles_secundarios": [],
+    "estado": "activo",
+    "fecha_registro": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": 2,
+    "sucursal_id": 1,
+    "nombre_completo": "Luis Rodríguez",
+    "email": "luis.r@barchello.com",
+    "usuario": "mesero",
+    "password": "1234",
+    "rol": "mesero",
+    "roles_secundarios": ["bartender"],
+    "estado": "activo",
+    "fecha_registro": "2026-02-10T18:30:00Z"
+  },
+  {
+    "id": 3,
+    "sucursal_id": 1,
+    "nombre_completo": "Fernando Niño",
+    "email": "fernando.n@barchello.com",
+    "usuario": "cocinero",
+    "password": "1234",
+    "rol": "cocinero",
+    "roles_secundarios": ["bartender"],
+    "estado": "activo",
+    "fecha_registro": "2026-03-05T12:00:00Z"
+  },
+  {
+    "id": 4,
+    "sucursal_id": 1,
+    "nombre_completo": "María Gómez",
+    "email": "maria.g@barchello.com",
+    "usuario": "gerente",
+    "password": "1234",
+    "rol": "gerente",
+    "roles_secundarios": [],
+    "estado": "activo",
+    "fecha_registro": "2026-04-01T09:00:00Z"
+  },
+  {
+    "id": 5,
+    "sucursal_id": 1,
+    "nombre_completo": "Carlos Pérez",
+    "email": "carlos.p@barchello.com",
+    "usuario": "cajero",
+    "password": "1234",
+    "rol": "cajero",
+    "roles_secundarios": [],
+    "estado": "activo",
+    "fecha_registro": "2026-04-15T14:00:00Z"
+  }
+]

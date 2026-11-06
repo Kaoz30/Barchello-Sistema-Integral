@@ -1,0 +1,182 @@
+<resources>
+
+    <!-- ======================== 1. GENERALES ======================== -->
+    <string name="app_name">Barchello Clientes</string>
+    <string name="logo_desc">Logo de Barchello Bávaro Pub</string>
+    <string name="barchello_title">Barchello Bávaro Pub</string>
+    <string name="barchello_bávaro_app">Barchello Bávaro app</string>
+    <string name="baril_desc">Fondo decorativo de barril artesanal</string>
+
+    <!-- ======================== 2. ONBOARDING ======================== -->
+    <string name="onboarding_titulo1">Bienvenido a Barchello</string>
+    <string name="onboarding_desc1">Pide desde tu mesa escaneando el código QR. Sin esperar al mesero.</string>
+    <string name="onboarding_titulo2">Acumula puntos</string>
+    <string name="onboarding_desc2">1 punto por cada $1000 gastado. Canjea por productos gratis.</string>
+    <string name="onboarding_titulo3">Seguimiento en tiempo real</string>
+    <string name="onboarding_desc3">Recibe notificaciones del estado de tu pedido.</string>
+    <string name="onboarding_siguiente">Siguiente</string>
+    <string name="onboarding_comenzar">Comenzar</string>
+    <string name="onboarding_omitir">Omitir</string>
+
+    <!-- ======================== 3. LOGIN Y REGISTRO ======================== -->
+    <string name="login_titulo">Iniciar sesión</string>
+    <string name="login_email">Correo electrónico</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_ingresar">Ingresar</string>
+    <string name="login_google">Continuar con Google</string>
+    <string name="login_registrate">¿No tienes cuenta? Regístrate</string>
+    <string name="login_olvidaste">¿Olvidaste tu contraseña?</string>
+    <string name="login_usuario">Usuario</string>
+    <string name="login_recordarme">Recordarme</string>
+    <string name="login_invitado">Continuar como invitado</string>
+    <string name="login_error_vacio">Este campo es obligatorio</string>
+    <string name="login_error_usuario">El usuario no existe</string>
+    <string name="login_error_password">Contraseña incorrecta</string>
+
+    <!-- Mensajes de error para Registro -->
+    <string name="registro_error_vacio">Este campo es obligatorio</string>
+    <string name="registro_error_email_invalido">Correo electrónico no válido</string>
+    <string name="registro_error_telefono">Ingresa solo números (mínimo 7 dígitos)</string>
+    <string name="registro_error_password_corta">La contraseña debe tener al menos 4 caracteres</string>
+    <string name="registro_error_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="registro_error_terminos">Debes aceptar los términos y condiciones</string>
+    <string name="registro_exitoso">✅ Registro exitoso</string>
+
+    <string name="registro_titulo">Crear cuenta</string>
+    <string name="registro_nombre">Nombre completo</string>
+    <string name="registro_telefono">Teléfono</string>
+    <string name="registro_email">Correo electrónico</string>
+    <string name="registro_password">Contraseña</string>
+    <string name="registro_confirmar">Confirmar contraseña</string>
+    <string name="registro_terminos">Acepto los términos y condiciones</string>
+    <string name="registro_btn">Registrarse</string>
+    <string name="registro_confirmacion">Te hemos enviado un enlace de confirmación a tu correo.</string>
+    <string name="tv_ir_login">¿Ya tienes cuenta? Inicia sesión</string>
+
+    <!-- ======================== 4. HOME / CATEGORÍAS ======================== -->
+    <string name="home_titulo">Barchello Bávaro Pub</string>
+    <string name="categoria">Categorías</string>
+    <string name="categoria_comer">Para Comer</string>
+    <string name="categoria_picar">Para Picar</string>
+    <string name="categoria_cocteleria">Coctelería</string>
+    <string name="categoria_cervezas_licores">Cervezas y Licores</string>
+    <string name="categoria_bebidas">Bebidas</string>
+    <string name="categoria_cafeteria">Cafetería</string>
+    <string name="categoria_icon_desc">Ícono de categoría</string>
+    <string name="productos_destacados">Lo más pedido</string>
+    <string name="ver_menu_completo">Ver menú completo</string>
+
+    <!-- ======================== 5. PRODUCTOS / DETALLE ======================== -->
+    <string name="detalle_agregar">Agregar al carrito</string>
+    <string name="detalle_cantidad">Cantidad</string>
+    <string name="menos">-</string>
+    <string name="mas">+</string>
+    <string name="cantidad_inicial">1</string>
+    <string name="formato_precio">$%d</string>
+
+    <!-- Placeholders de ejemplo (se sobreescriben con datos reales) -->
+    <string name="hamburguesa_nombre">Hamburguesa artesanal</string>
+    <string name="hamburguesa_descripcion">Carne de res 200g, queso cheddar, lechuga, tomate, cebolla caramelizada, salsa especial.</string>
+    <string name="hamburguesa_precio">$18.500</string>
+    <string name="hamburguesa_imagen_desc">Imagen de la hamburguesa artesanal</string>
+
+    <!-- ======================== 6. PEDIDOS Y CARRITO ======================== -->
+    <string name="mi_pedido">Mi pedido</string>
+    <string name="carrito_vacio">Tu carrito está vacío</string>
+    <string name="carrito_observaciones">Observaciones (opcional)</string>
+    <string name="carrito_enviar_mesa">Enviar pedido a mesa</string>
+    <string name="carrito_domicilio_titulo">Pedido a domicilio</string>
+    <string name="carrito_seleccionar_direccion">Seleccionar dirección</string>
+    <string name="carrito_nueva_direccion">Agregar nueva dirección</string>
+    <string name="carrito_metodo_pago">Método de pago</string>
+    <string name="carrito_efectivo">Efectivo</string>
+    <string name="carrito_tarjeta">Tarjeta (demo)</string>
+    <string name="carrito_transferencia">Transferencia</string>
+    <string name="carrito_costo_envio">Costo de envío</string>
+    <string name="carrito_total">Total</string>
+    <string name="carrito_realizar_pedido">Realizar pedido</string>
+    <string name="carrito_pedido_enviado">Pedido enviado. El mesero lo confirmará pronto.</string>
+    <string name="carrito_codigo_entrega">Tu código de entrega es:</string>
+    <string name="seleccionar_direccion">Seleccionar dirección</string>
+    <string name="costo_envio_valor">$3.000</string>
+
+    <!-- Historial de pedidos -->
+    <string name="pedido_fecha_completo">Fecha: 05/06/2026</string>
+    <string name="pedido_total_completo">Total: $25.000</string>
+    <string name="pedido_estado_entregado_completo">Estado: Entregado</string>
+    <string name="pedido_tipo_domicilio">Domicilio</string>
+    <string name="pedido_fecha_ejemplo">05/06/2026</string>
+    <string name="pedido_total_ejemplo">$25.000</string>
+    <string name="pedido_estado_entregado">Entregado</string>
+
+    <!-- ======================== 7. ESCÁNER QR ======================== -->
+    <string name="escaner_ayuda">Apunta al código QR de la mesa</string>
+    <string name="escaner_codigo">Código</string>
+    <string name="escaner_linterna">Linterna</string>
+    <string name="escaner_imagen">Imagen</string>
+    <string name="linterna_desc">Encender linterna</string>
+    <string name="escaner_escaneando">Escaneando… Mesa %d detectada</string>
+    <string name="escaner_linterna_encendida">Linterna encendida (simulado)</string>
+    <string name="escaner_linterna_apagada">Linterna apagada</string>
+    <string name="escaner_codigo_barras">Modo código de barras (próximamente)</string>
+    <string name="escaner_imagen_galeria">Seleccionar imagen de la galería (próximamente)</string>
+
+    <!-- ======================== 8. SEGUIMIENTO DE PEDIDO ======================== -->
+    <string name="seguimiento_estado">Estado del pedido</string>
+    <string name="seguimiento_confirmado">Confirmado</string>
+    <string name="seguimiento_preparacion">En preparación</string>
+    <string name="seguimiento_listo">Listo</string>
+    <string name="seguimiento_servido">Servido</string>
+    <string name="seguimiento_camino">En camino</string>
+    <string name="seguimiento_entregado">Entregado</string>
+    <string name="seguimiento_cancelar">Cancelar pedido</string>
+    <string name="seguimiento_detalles">Ver detalles</string>
+    <string name="codigo_entrega_ejemplo">1234</string>
+
+    <!-- ======================== 9. PERFIL Y PUNTOS ======================== -->
+    <string name="perfil_titulo">Mi perfil</string>
+    <string name="perfil_puntos">Mis puntos</string>
+    <string name="perfil_canjear">Canjear puntos</string>
+    <string name="perfil_historial">Historial de pedidos</string>
+    <string name="perfil_soporte">Soporte</string>
+    <string name="perfil_configuracion">Configuración</string>
+    <string name="perfil_cerrar_sesion">Cerrar sesión</string>
+    <string name="perfil_eliminar_cuenta">Eliminar cuenta</string>
+    <string name="datos_personales_titulo">Datos personales</string>
+    <string name="nombre_ejemplo">Jonh Jiménez</string>
+    <string name="email_ejemplo">jonh@example.com</string>
+    <string name="telefono_ejemplo">300 123 4567</string>
+    <string name="editar_perfil">Editar</string>
+    <string name="puntos_ejemplo">1.250 puntos</string>
+    <string name="formato_puntos">%d puntos</string>
+    <string name="dialog_canjear_titulo">Canjear puntos</string>
+    <string name="producto_cerveza">Cerveza artesanal</string>
+    <string name="producto_hamburguesa">Hamburguesa</string>
+    <string name="producto_postre">Postre especial</string>
+    <string name="puntos_insuficientes">No tienes suficientes puntos para canjear</string>
+
+    <!-- ======================== 10. NOTIFICACIONES ======================== -->
+    <string name="notificaciones_titulo">Notificaciones</string>
+    <string name="notificaciones_vacio">No hay notificaciones</string>
+    <string name="notificacion_titulo_ejemplo">Pedido en preparación</string>
+    <string name="notificacion_descripcion_ejemplo">Tu pedido #1024 está siendo preparado</string>
+    <string name="notificacion_fecha_ejemplo">Hace 2 minutos</string>
+
+    <!-- ======================== 11. SOPORTE ======================== -->
+    <string name="soporte_whatsapp">WhatsApp</string>
+    <string name="soporte_llamar">Llamar</string>
+    <string name="soporte_email">Email</string>
+    <string name="soporte_formulario_titulo">Escríbenos</string>
+    <string name="soporte_nombre">Tu nombre</string>
+    <string name="soporte_mensaje">Mensaje</string>
+    <string name="soporte_enviar">Enviar</string>
+
+    <!-- ======================== 12. MENÚ DE NAVEGACIÓN ======================== -->
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_escaner">Escáner</string>
+    <string name="menu_carrito">Carrito</string>
+    <string name="menu_notificaciones">Notificaciones</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="todo">TODO</string>
+
+</resources>

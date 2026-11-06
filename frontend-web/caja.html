@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- FAVICON BARCHELLO — SET PROFESIONAL (RFG)  -->
+    <!-- 1. Precarga con prioridad alta del icono de pestaña -->
+    <link rel="preload" as="image" href="img/favicon/favicon-96x96.png">
+    <!-- 2. Icono principal PNG (Chrome, Firefox, Edge modernos) -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <!-- 3. iOS / iPadOS al guardar en pantalla de inicio -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <!-- 4. Manifest PWA (Android Chrome / instalación como app) -->
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barchello Bávaro Pub - Caja</title>
+
+    <!-- Bootstrap CSS desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS externo compartido -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Precarga el logo del navbar para que esté disponible al instante -->
+    <link rel="preload" href="img/logos/logo-barchello-small.png" as="image">
+</head>
+
+<body class="validando-sesion">
+    <!-- NUEVO: Contenedor flex que empuja el footer hacia abajo -->
+    <div class="main-wrapper">
+    <!-- NAVBAR CON OFFCANVAS (Diseño 3 zonas) - Barra superior del sistema (siempre visible) -->
+    <header>
+        <nav class="navbar navbar-dark bg-cuero shadow-sm navbar-barchello">
+            <div class="container-fluid px-2 px-md-3">
+
+                <!-- ZONA IZQUIERDA: grid + marca (envueltos en su grupo) -->
+                <div class="navbar-left-group">
+                    <button class="btn-hamburger" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                            aria-controls="offcanvasMenu" aria-expanded="false"
+                            aria-label="Abrir menú de módulos">
+                        <i class="bi bi-grid-3x3-gap-fill" id="iconoMenuTrigger"></i>
+                    </button>
+                    <!-- navbar superior -->
+                    <a class="navbar-brand-link" href="dashboard.html" title="Barchello Bávaro Pub">
+                        <img src="img/logos/logo-barchello-small.png" alt=""
+                             class="navbar-brand-logo" loading="eager" decoding="async" fetchpriority="high">
+                        <span class="navbar-brand-text">Barchello Bávaro Pub</span>
+                    </a>
+                </div>
+
+                <!-- ZONA DERECHA: usuario (se conserva igual) -->
+                <div class="dropdown user-dropdown">
+                    <button class="btn-user-dropdown dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" id="userDropdown">
+                        <span class="user-avatar" id="userAvatarNav">U</span>
+                        <span class="user-info d-none d-md-inline-block text-start">
+                            <span class="user-name d-block lh-1" id="nombre-usuario-nav">Usuario</span>
+                            <span class="user-role d-block lh-1" id="rol-usuario-nav">Rol</span>
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end user-dropdown-menu shadow-lg" aria-labelledby="userDropdown">
+                        <!-- Header con info del usuario -->
+                        <li class="dropdown-header-user">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="user-avatar-lg" id="userAvatarDropdown">U</span>
+                                <div>
+                                    <div class="fw-bold" id="userNameDropdown">Usuario</div>
+                                    <small class="text-muted" id="userRoleDropdown">Rol</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="btnMiPerfil">
+                                <i class="bi bi-person-circle me-2 text-roble"></i>Mi Perfil
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="btnCambiarTurno">
+                                <i class="bi bi-arrow-repeat me-2 text-roble"></i>Cambiar Rol / Turno
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="btnConfiguracion" data-role="admin,gerente">
+                                <i class="bi bi-gear me-2 text-roble"></i>Configuración
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item text-danger" href="#" id="btnCerrarSesion">
+                                <i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <!-- OFFCANVAS v3: panel oscuro flotante -->
+    <div class="offcanvas offcanvas-start offcanvas-barchello" tabindex="-1"
+         id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel"
+         data-bs-scroll="false" data-bs-backdrop="true">
+
+        <!-- Header del offcanvas -->
+        <div class="offcanvas-header offcanvas-header-barchello">
+            <a class="offcanvas-brand-link" href="dashboard.html">
+                <img src="img/logos/logo-barchello-small.png" alt="" 
+                 class="offcanvas-brand-logo" loading="eager" decoding="async">
+                <span class="offcanvas-brand-text" id="offcanvasMenuLabel">BaBah</span>
+            </a>
+        </div>
+
+        <div class="offcanvas-user-info">
+            <span class="offcanvas-user-avatar" id="userAvatarOffcanvas">U</span>
+            <div>
+                <div class="offcanvas-user-name" id="userNameOffcanvas">Usuario</div>
+                <div class="offcanvas-user-role" id="userRoleOffcanvas">Rol</div>
+            </div>
+        </div>
+
+        <div class="offcanvas-body offcanvas-body-barchello">
+
+            <div class="offcanvas-section-title">Operación</div>
+            <nav class="offcanvas-nav">
+                <a class="offcanvas-nav-link" href="dashboard.html" data-module="dashboard">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-display"></i></span>
+                    <span>Dashboard</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link" href="reservas.html" data-module="reservas"
+                   data-role="admin,gerente,mesero,bartender">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-calendar-check"></i></span>
+                    <span>Reservas</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link" href="cocina.html" data-module="cocina"
+                   data-role="admin,gerente,cocinero,bartender">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-fire"></i></span>
+                    <span>Cocina &amp; Bar</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link" href="ventas.html" data-module="ventas"
+                   data-role="admin,gerente,cajero,mesero">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-cash-coin"></i></span>
+                    <span>Ventas</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+            </nav>
+            <hr class="offcanvas-divider">
+
+            <div class="offcanvas-section-title">Gestión</div>
+            <nav class="offcanvas-nav">
+                <a class="offcanvas-nav-link" href="menu.html" data-module="menu"
+                   data-role="admin,gerente">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-book"></i></span>
+                    <span>Menú</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link" href="inventario.html" data-module="inventario"
+                   data-role="admin,gerente">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-box-seam"></i></span>
+                    <span>Inventario</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link" href="compras.html" data-module="compras"
+                   data-role="admin,gerente">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-cart3"></i></span>
+                    <span>Compras</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link" href="caja.html" data-module="caja"
+                   data-role="admin,gerente,cajero">
+                    <span class="offcanvas-nav-icon"><img src="img/iconos/caja-registradora.png" alt=""></span>
+                    <span>Caja</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+            </nav>
+            <hr class="offcanvas-divider">
+
+            <div class="offcanvas-section-title">Administración</div>
+            <nav class="offcanvas-nav">
+                <a class="offcanvas-nav-link" href="reportes.html" data-module="reportes"
+                   data-role="admin,gerente">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-bar-chart"></i></span>
+                    <span>Reportes</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link" href="usuarios.html" data-module="usuarios"
+                   data-role="admin">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-people"></i></span>
+                    <span>Usuarios</span>
+                    <i class="bi bi-chevron-right offcanvas-nav-chevron"></i>
+                </a>
+                <a class="offcanvas-nav-link disabled-future" href="#" data-module="mesas"
+                   data-role="admin,gerente,mesero">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-grid-3x3"></i></span>
+                    <span>Mesas</span>
+                    <span class="offcanvas-future-badge">Próx.</span>
+                </a>
+                <a class="offcanvas-nav-link disabled-future" href="#" data-module="configuracion"
+                   data-role="admin,gerente">
+                    <span class="offcanvas-nav-icon"><i class="bi bi-gear"></i></span>
+                    <span>Configuración</span>
+                    <span class="offcanvas-future-badge">Próx.</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container my-5 main-content">
+        <h2 class="titulo-principal text-cuero mb-4">
+            <img src="img/iconos/caja-registradora.png" 
+                alt="Caja" 
+                style="height: 2rem; vertical-align: middle; position: relative; top: -3px; filter: brightness(0) saturate(100%); opacity: 0.9;" 
+                class="me-2">
+            Gestión de Caja
+        </h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-roble text-white"><h3 class="h5 mb-0">Apertura / Cierre de Turno</h3></div>
+                    <div class="card-body">
+                        <p><strong>Turno actual:</strong> Diurno (08:00 - 16:00)</p>
+                        <p><strong>Fondo inicial:</strong> $200.000</p>
+                        <p><strong>Total en caja:</strong> $1.845.000</p>
+                        <button class="btn btn-roble w-100 mt-3" id="btnCierreCaja">
+                            <i class="bi bi-door-closed me-2"></i>Realizar Cierre de Caja
+                        </button>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-cuero text-white"><h3 class="h5 mb-0">Últimos Movimientos</h3></div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-sm">
+                            <thead><tr><th>Hora</th><th>Concepto</th><th>Monto</th></tr></thead>
+                            <tbody>
+                                <tr><td>15:30</td><td>Pago factura #1024</td><td class="text-success">+$85.500</td></tr>
+                                <tr><td>15:15</td><td>Sangría (retiro parcial)</td><td class="text-danger">-$100.000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CAMBIADO: mt-5 por mt-auto para que el footer se pegue al fondo -->
+    <footer class="bg-cuero text-white text-center py-3 mt-auto">
+        <div class="container"><small>&copy; 2026 Barchello Bávaro Pub - Sistema de Gestión. Proyecto Académico SENA ADSO.</small>
+        </div>
+    </footer>
+    </div><!-- CIERRE del main-wrapper -->
+
+    <!-- Modal de Confirmación Cierre de Caja -->
+    <div class="modal fade" id="modalCierreCaja" tabindex="-1" aria-labelledby="modalCierreCajaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 16px; border: none;">
+                <div class="modal-header bg-cuero text-white" style="border-radius: 16px 16px 0 0;">
+                    <h5 class="modal-title titulo-principal" id="modalCierreCajaLabel">
+                        <i class="bi bi-exclamation-triangle me-2"></i>Confirmar Cierre de Caja
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-3">Esta acción cerrará el turno actual y registrará el arqueo de caja. ¿Deseas continuar?</p>
+                    
+                    <div class="card bg-arena-light mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Fondo inicial:</span>
+                                <strong class="text-cuero">$200.000</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Total en sistema:</span>
+                                <strong class="text-success">$1.845.000</strong>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="fw-bold">Total esperado:</span>
+                                <strong class="text-cuero fs-5">$2.045.000</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="montoContado" class="form-label fw-semibold">
+                            <i class="bi bi-cash-stack me-1"></i>Monto físico contado ($)
+                        </label>
+                        <input type="number" class="form-control" id="montoContado" 
+                               placeholder="Ingrese el monto contado en efectivo" 
+                               min="0" step="1000" required>
+                        <div class="form-text">Ingrese el monto real en efectivo que tiene en caja.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="observacionesCierre" class="form-label fw-semibold">
+                            <i class="bi bi-chat-left-text me-1"></i>Observaciones (opcional)
+                        </label>
+                        <textarea class="form-control" id="observacionesCierre" rows="2" 
+                                  placeholder="Ej: Diferencia de $5.000, billete dañado, etc."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-roble" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-roble" id="btnConfirmarCierre">
+                        <i class="bi bi-check-lg me-1"></i>Confirmar Cierre
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ARQUITECTURA GLOBAL DE SCRIPTS (ÚNICO BLOQUE) -->
+    <!-- ORDEN OPTIMIZADO (auth primero, validaciones al final) -->
+    <!-- 1. Bootstrap JS (necesario para dropdowns y modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 2. Auth INMEDIATO (se auto-ejecuta, no espera nada) -->
+    <script src="js/auth.js"></script>
+
+    <!-- 3. UI (toasts, helpers - usado por auth) -->
+    <script src="js/ui.js"></script>
+
+    <!-- 4. API (capa de datos) -->
+    <script src="js/api.js"></script>
+
+    <!-- 5. jQuery + Validate (solo necesarios en páginas con formularios) -->
+    <script src="js/lib/jquery-3.7.1.min.js"></script>
+    <script src="js/lib/jquery.validate.min.js"></script>
+
+    <!-- 6. Validaciones (depende de jQuery) -->
+    <script src="js/validaciones.js"></script>
+
+    <!-- 7. App.js AL FINAL (inicializa módulos específicos) -->
+    <script src="js/app.js"></script>
+
+        <!-- Script específico de Caja -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btnCierre = document.getElementById('btnCierreCaja');
+        const modalEl = document.getElementById('modalCierreCaja');
+        const btnConfirmar = document.getElementById('btnConfirmarCierre');
+        
+        if (!btnCierre || !modalEl) return;
+        
+        const modalCierre = new bootstrap.Modal(modalEl);
+
+        // Abrir modal al hacer clic
+        btnCierre.addEventListener('click', () => {
+            modalCierre.show();
+        });
+
+        // Confirmar cierre
+        btnConfirmar.addEventListener('click', async () => {
+            const montoContado = document.getElementById('montoContado').value;
+            const observaciones = document.getElementById('observacionesCierre').value;
+
+            if (!montoContado || parseFloat(montoContado) < 0) {
+                UI.mostrarToast('⚠️ Ingrese un monto válido', 'warning');
+                return;
+            }
+
+            const datos = {
+                turno: 'Diurno',
+                fondoInicial: 200000,
+                totalSistema: 1845000,
+                montoContado: parseFloat(montoContado),
+                diferencia: parseFloat(montoContado) - 2045000,
+                observaciones: observaciones,
+                usuarioCierre: Auth.obtenerUsuarioActual()?.nombre || 'Desconocido',
+                fecha: new Date().toISOString()
+            };
+
+            UI.mostrarLoading('#btnConfirmarCierre', 'Cerrando...');
+            
+            try {
+                const resp = await API.cerrarCaja(datos);
+                modalCierre.hide();
+                UI.mostrarToast('✅ ' + resp.mensaje, 'success');
+                
+                // Resetear formulario
+                document.getElementById('montoContado').value = '';
+                document.getElementById('observacionesCierre').value = '';
+            } catch (error) {
+                UI.mostrarToast('Error al cerrar: ' + error.message, 'danger');
+            } finally {
+                UI.ocultarLoading('#btnConfirmarCierre');
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

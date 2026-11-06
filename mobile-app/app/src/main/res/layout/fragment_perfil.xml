@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/arena"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/TituloPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil_titulo"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Datos personales (CardView sin estilo externo) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/datos_personales_titulo"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/nombre_ejemplo" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_ejemplo" />
+
+                <TextView
+                    android:id="@+id/tv_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telefono_ejemplo" />
+
+                <Button
+                    android:id="@+id/btn_editar_perfil"
+                    style="@style/ButtonSecundario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/editar_perfil"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Puntos y canje -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_puntos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perfil_puntos"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_puntos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/puntos_ejemplo"
+                    android:textColor="@color/roble"
+                    android:textSize="24sp"
+                    android:layout_marginTop="4dp" />
+
+                <Button
+                    android:id="@+id/btn_canjear"
+                    style="@style/ButtonPrimario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perfil_canjear"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Historial de pedidos -->
+        <Button
+            android:id="@+id/btn_historial"
+            style="@style/ButtonSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil_historial"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Soporte -->
+        <Button
+            android:id="@+id/btn_soporte"
+            style="@style/ButtonSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil_soporte"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Configuración -->
+        <Button
+            android:id="@+id/btn_configuracion"
+            style="@style/ButtonSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil_configuracion"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Cerrar sesión -->
+        <Button
+            android:id="@+id/btn_cerrar_sesion"
+            style="@style/ButtonSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil_cerrar_sesion"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Eliminar cuenta -->
+        <Button
+            android:id="@+id/btn_eliminar_cuenta"
+            style="@style/ButtonPrimario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil_eliminar_cuenta"
+            android:backgroundTint="@color/rojo_error" />
+
+    </LinearLayout>
+</ScrollView>
