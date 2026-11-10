@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.barchello.cliente.R;
+import com.barchello.cliente.dao.UsuarioDAO;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -61,7 +62,8 @@ public class LoginActivity extends AppCompatActivity {
         // ✅ 4. LIMPIAR Errores AL ESCRIBIR (NUEVO)
         etUsuario.addTextChangedListener(new android.text.TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -72,12 +74,14 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(android.text.Editable s) {}
+            public void afterTextChanged(android.text.Editable s) {
+            }
         });
 
         etPassword.addTextChangedListener(new android.text.TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -88,10 +92,11 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(android.text.Editable s) {}
+            public void afterTextChanged(android.text.Editable s) {
+            }
         });
 
-        // ✅ 5. Botón Login
+        // 5. Botón Login
         btnLogin.setOnClickListener(v -> {
             String usuario = Objects.requireNonNull(etUsuario.getText()).toString().trim();
             String password = Objects.requireNonNull(etPassword.getText()).toString().trim();
@@ -111,22 +116,22 @@ public class LoginActivity extends AppCompatActivity {
                 tilPassword.requestFocus();
                 return;
             }
-            if (!usuario.equals("admin") && !usuario.equals("juanperez")) {
-                tilUsuario.setError(getString(R.string.login_error_usuario));
-                tilUsuario.requestFocus();
-                return;
-            }
-            if (!password.equals("1234")) {
-                tilPassword.setError(getString(R.string.login_error_password));
-                tilPassword.requestFocus();
-                return;
-            }
 
-            Toast.makeText(this, "Bienvenido " + usuario, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            intent.putExtra("modo", "registrado");
-            startActivity(intent);
-            finish();
+            // --- NUEVA VALIDACIÓN CON SQLITE ---
+            UsuarioDAO usuarioDAO = new UsuarioDAO(this);
+            boolean esValido = usuarioDAO.validarUsuario(usuario, password);
+
+            if (esValido) {
+                Toast.makeText(this, "Bienvenido " + usuario, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("modo", "registrado");
+                startActivity(intent);
+                finish();
+            } else {
+                // Si no es válido, mostramos el error
+                tilPassword.setError("Usuario o contraseña incorrectos");
+                tilPassword.requestFocus();
+            }
         });
 
         // ✅ 6. Botón Google (simulado)
