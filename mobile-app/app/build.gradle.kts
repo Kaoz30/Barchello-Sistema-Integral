@@ -51,6 +51,9 @@ dependencies {
     implementation("androidx.camera:camera-view:1.6.1")
 
     testImplementation(libs.junit)
+    testImplementation("androidx.test:core:1.5.0")
+    testImplementation("junit:junit:4.13.2")
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    androidTestImplementation("androidx.test:runner:1.5.2")
 }
