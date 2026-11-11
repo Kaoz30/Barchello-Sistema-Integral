@@ -1,0 +1,9 @@
+# Archivos temporales de Office
+~$*
+
+# Configuraciones de IDEs
+.idea/
+.vscode/
+*.iml
+target/
+build/

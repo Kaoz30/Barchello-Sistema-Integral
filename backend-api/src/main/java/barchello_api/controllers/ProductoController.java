@@ -27,4 +27,14 @@ public class ProductoController {
     public Producto crearProducto(@RequestBody Producto producto) {
         return productoRepository.save(producto);
     }
+
+    // 3. Eliminar un producto
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarProducto(@PathVariable Integer id) {
+        if (productoRepository.existsById(id)) {
+            productoRepository.deleteById(id);
+            return ResponseEntity.noContent().build(); // Retorna 204 (Éxito, sin contenido)
+        }
+        return ResponseEntity.notFound().build(); // Retorna 404
+    }
 }

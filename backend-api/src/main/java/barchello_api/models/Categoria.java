@@ -5,15 +5,21 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "Categoria")
+@Table(name = "categorias") // Forzamos plural y minúscula
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_categoria") // Snake_case para la PK
     private Integer idCategoria;
 
+    @Column(name = "nombre", nullable = false, unique = true)
     private String nombre;
+
+    @Column(name = "descripcion")
     private String descripcion;
-    private String usuarioCreacion; // Agregado
+
+    @Column(name = "usuario_creacion")
+    private String usuarioCreacion;
 
     // Esto se ejecuta justo ANTES de guardar en la BD
     @PrePersist
